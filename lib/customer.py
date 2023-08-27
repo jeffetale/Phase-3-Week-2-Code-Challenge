@@ -28,6 +28,7 @@ class Customer:
     def add_review(self, restaurant, rating):
         new_review = Review(self, restaurant, rating)
         self._reviews.append(new_review)
+        restaurant.add_review(new_review)
 
     def reviews(self):
         return self._reviews
