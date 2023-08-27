@@ -45,4 +45,13 @@ class Customer:
     @classmethod
     def all(cls):
         return cls.all_customers
+    
+    @classmethod
+    def find_all_by_given_name(cls, given_name):
+        matching_customers = []
+        for customer in cls.all_customers:
+            if customer.given_name() == given_name:
+                matching_customers.append(customer)
+        return matching_customers
+        
 

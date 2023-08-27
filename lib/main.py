@@ -45,3 +45,13 @@ if customer:
     print(f"\nFound customer: {customer.full_name()}")
 else:
     print("Customer not found")
+
+# Return the names that matches a customers' given name
+matching_customers = Customer.find_all_by_given_name("John")
+for customer in matching_customers:
+    print(f"\nFound customer: {customer.full_name()}")
+
+# Get average star rating for restaurants based on reviews
+print(f"\n{restaurant1.name()} has an average star rating of {restaurant1.average_star_rating()}")
+
+
