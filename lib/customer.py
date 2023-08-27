@@ -1,3 +1,5 @@
+from review import Review
+
 class Customer:
 
     all_customers = []
@@ -18,11 +20,17 @@ class Customer:
         return self.first_name + " " + self.last_name
     
     def restaurants(self):
-        unique_restaurants = set()
+        reviewed_restaurants = set()
         for review in self._reviews:
-            unique_restaurants.add(review.restaurant())
+            reviewed_restaurants.add(review.restaurant())
+        return list(reviewed_restaurants)
+    
+    def add_review(self, restaurant, rating):
+        new_review = Review(self, restaurant, rating)
+        self._reviews.append(new_review)
 
-        return list(unique_restaurants)
+    def reviews(self):
+        return self._reviews
     
     @classmethod
     def all(cls):

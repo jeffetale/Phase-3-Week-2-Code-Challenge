@@ -7,7 +7,7 @@ class Review:
         self.rating = rating
         Review.all_reviews.append(self)
 
-    def rating(self):
+    def get_rating(self):
         return self.rating
     
     def customer(self):

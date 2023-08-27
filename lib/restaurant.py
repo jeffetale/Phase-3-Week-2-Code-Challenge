@@ -1,5 +1,5 @@
 class Restaurant:
-    def __init__(self, name=str):
+    def __init__(self, name):
         self._name = name
         self._reviews = []
 
@@ -12,7 +12,7 @@ class Restaurant:
     def reviews(self):
         return self._reviews
     
-    def reviewed_customers(self):
+    def customers(self):
         unique_customers = set()
         for review in self._reviews:
             unique_customers.add(review.customer())
