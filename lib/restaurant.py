@@ -6,7 +6,7 @@ class Restaurant:
     def name(self):
         return self._name
     
-    def add_reviews(self, review):
+    def add_review(self, review):
         self._reviews.append(review)
 
     def reviews(self):
