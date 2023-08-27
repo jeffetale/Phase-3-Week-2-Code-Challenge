@@ -19,7 +19,7 @@ for r in customer1.restaurants():
     print(r.name())
 
 # Get unique customers who reviewed a restaurant
-print(f"{restaurant1.name()} has been reviewed by:")
+print(f"\n{restaurant1.name()} has been reviewed by:")
 for c in restaurant1.customers():
     print(c.full_name())
 
@@ -33,4 +33,15 @@ for c in all_customers:
 # Get all reviews
 all_reviews = Review.all()
 for r in all_reviews:
-    print(f"Customer: {r.customer().full_name()}, Restaurant: {r.restaurant().name()}, Rating: {r.get_rating()}")
+    print(f"\nCustomer: {r.customer().full_name()}, Restaurant: {r.restaurant().name()}, Rating: {r.get_rating()}")
+
+# Get the number of reviews authored by a customer
+print(f"\n{customer1.full_name()} has authored {customer1.num_reviews()} reviews")
+print(f"{customer2.full_name()} has authored {customer2.num_reviews()} reviews")
+
+# Return the name that matches a customer's full name
+customer = Customer.find_by_name("John Doe")
+if customer:
+    print(f"\nFound customer: {customer.full_name()}")
+else:
+    print("Customer not found")
