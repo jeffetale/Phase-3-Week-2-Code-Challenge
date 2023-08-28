@@ -30,9 +30,10 @@ Make sure you have Python 3.10 installed on your system.
 * `main.py`: An example script demonstrating the usage of the modules.
 2. To run the example script, use the following command:
 
- `python lib/main.py`
- 
-This will demonstrate various functionalities of the project, such as adding reviews, retrieving information about customers and restaurants, and calculating average ratings.
+     `python lib/main.py`
+
+     This will demonstrate various functionalities of the project, such as adding reviews, retrieving information about customers and restaurants, and calculating average ratings.
+
 3. Feel free to modify the example script or create your own scripts to interact with the classes according to your requirements.
 
 ### Contributing
